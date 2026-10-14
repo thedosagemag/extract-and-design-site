@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Extract & Design is an independent design studio creating brands, marketing, print and film for businesses, clubs and publishers in Australia and Sri Lanka.">
+<meta property="og:title" content="Extract & Design">
+<meta property="og:description" content="Independent design studio: branding, graphic design, marketing, publishing and film.">
+<meta property="og:image" content="work/taj-ad.jpg">
+<meta name="theme-color" content="#141C36">
+<title>Extract and Design</title>
+<link rel="icon" href="brand/mark-navy.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: a modern agency page built on the refreshed E&D mark. Big serif statement, crop-mark corners as the recurring device (they come from the logo), deep navy bands, one coral accent taken from the ampersand. */
+:root{
+  --navy:#141C36; --navy-2:#1C2646; --chalk:#EEF0F6; --coral:#FF6B4A;
+  --bg:#F6F7FA; --surface:#FFFFFF; --ink:#141C36; --muted:#525A70; --line:#DDE0E9;
+  --accent-text:#D2462A;
+  --serif:'Manrope','Segoe UI','Helvetica Neue',Arial,sans-serif;
+  --sans:'Manrope','Segoe UI','Helvetica Neue',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1428; --surface:#161F3A; --ink:#EEF0F6; --muted:#A9AFC4; --line:#28324F; --accent-text:#FF8468; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0E1428; --surface:#161F3A; --ink:#EEF0F6; --muted:#A9AFC4; --line:#28324F; --accent-text:#FF8468; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0}
+img{max-width:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.3rem;line-height:1.65;font-weight:500}
+.in{max-width:70rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;margin:0;text-wrap:balance;letter-spacing:-.025em}
+h1 em,h2 em,blockquote em{font-style:normal}
+.caps{font-weight:500;font-size:.92rem;letter-spacing:.3em;text-transform:uppercase}
+.amp{color:var(--coral)}
+
+/* mark colours by context */
+.on-navy{--mk-fg:#EEF0F6}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--navy);color:var(--chalk)}
+header .in{display:flex;justify-content:space-between;align-items:center;gap:12px 20px;flex-wrap:wrap;padding-block:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:46px;height:46px;display:block}
+.brand .caps{font-size:.85rem}
+nav{display:flex;gap:clamp(14px,3vw,32px);flex-wrap:wrap;align-items:center}
+nav a{text-decoration:none;font-size:1.05rem;opacity:.85}
+nav a:hover{opacity:1}
+nav a.cta{opacity:1;background:var(--coral);color:var(--navy);padding:8px 16px;font-weight:600}
+
+/* hero */
+.hero{background:var(--navy);color:var(--chalk);padding-block:clamp(52px,9vw,120px) clamp(56px,9vw,120px);overflow:hidden}
+.hero .in{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:center}
+@media (max-width:800px){.hero .in{grid-template-columns:minmax(0,1fr)}.hero .big{order:-1;max-width:260px}}
+.hero h1{font-size:clamp(3rem,7.6vw,5.8rem);line-height:1.02}
+.hero h1 em{color:var(--coral)}
+.hero p{margin:24px 0 0;font-size:clamp(1.35rem,2.4vw,1.6rem);max-width:36ch;color:#C9CDDB}
+.big svg{width:100%;height:auto;display:block}
+.big{justify-self:center;width:100%;max-width:420px}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;padding:16px 26px;border:2px solid var(--chalk);color:var(--chalk)}
+.btn.coral{background:var(--coral);border-color:var(--coral);color:var(--navy)}
+.btn:hover{background:var(--chalk);border-color:var(--chalk);color:var(--navy)}
+.strip{border-top:1px solid #2A3458;margin-top:clamp(44px,7vw,80px);padding-top:22px;display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;color:#AEB4C8}
+
+/* sections */
+section{padding-block:clamp(60px,9vw,110px)}
+section + section{border-top:1px solid var(--line)}
+.sh{display:grid;gap:14px;margin-bottom:clamp(32px,5vw,56px);max-width:44rem}
+.sh .caps{color:var(--accent-text)}
+.sh h2{font-size:clamp(2.5rem,5.6vw,4rem);line-height:1.05}
+.sh p{margin:0;color:var(--muted);font-size:1.4rem}
+
+/* crop-mark corners, the brand device */
+.crop{position:relative}
+.crop::before,.crop::after{content:"";position:absolute;width:26px;height:26px;border-color:var(--coral);border-style:solid;pointer-events:none}
+.crop::before{top:0;left:0;border-width:3px 0 0 3px}
+.crop::after{bottom:0;right:0;border-width:0 3px 3px 0}
+
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:760px){.services{grid-template-columns:minmax(0,1fr)}}
+.svc{background:var(--surface);padding:36px 32px;display:grid;gap:12px;align-content:start}
+.svc .no{font-family:var(--serif);font-weight:700;font-size:1.3rem;color:var(--accent-text)}
+.svc h3{font-size:2rem;line-height:1.1}
+.svc p{margin:0;color:var(--muted)}
+
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(32px,6vw,80px);align-items:start}
+@media (max-width:800px){.story{grid-template-columns:minmax(0,1fr)}}
+.story blockquote{margin:0;font-family:var(--serif);font-weight:600;font-size:clamp(2rem,4vw,2.9rem);line-height:1.15}
+.story blockquote em{color:var(--accent-text)}
+.story p{margin:0 0 1em;max-width:58ch}
+.founder{margin-top:26px;padding:22px 24px;background:var(--surface);display:grid;gap:2px}
+.founder b{font-family:var(--serif);font-weight:700;font-size:1.7rem}
+.founder span{color:var(--muted)}
+
+.work{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.work article{display:grid;grid-template-columns:7rem minmax(0,1fr) auto;gap:8px 28px;align-items:baseline;padding-block:28px;border-top:1px solid var(--line)}
+.work article:last-child{border-bottom:1px solid var(--line)}
+.work .yr{font-family:var(--serif);font-weight:700;font-size:1.4rem;color:var(--accent-text)}
+.work h3{font-size:clamp(1.8rem,3.4vw,2.4rem);line-height:1.1}
+.work p{margin:8px 0 0;color:var(--muted);max-width:56ch}
+.work .kind{font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+@media (max-width:640px){.work article{grid-template-columns:minmax(0,1fr)}.work .kind{order:-1}}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps{grid-template-columns:minmax(0,1fr)}}
+.steps li{border-top:3px solid var(--ink);padding-top:18px;display:grid;gap:8px;align-content:start}
+.steps .no{font-family:var(--serif);font-weight:700;font-size:1.3rem;color:var(--accent-text)}
+.steps h3{font-size:2rem;line-height:1.1}
+.steps p{margin:0;color:var(--muted)}
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3vw,36px)}
+@media (max-width:900px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.projects{grid-template-columns:minmax(0,1fr)}}
+.proj{display:grid;gap:8px;align-content:start;min-width:0}
+.proj .ph{aspect-ratio:4/3;max-width:100%;overflow:hidden;background:var(--surface);outline:1px solid var(--line);outline-offset:-1px;margin-bottom:8px}
+.proj .ph.fit{background:#141C36;display:flex;align-items:center;padding:12px}
+.proj .ph img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s}
+.proj .ph.fit img{object-fit:contain;height:auto}
+.proj:hover .ph img{transform:scale(1.03)}
+@media (prefers-reduced-motion: reduce){.proj .ph img{transition:none}}
+.proj .meta{display:flex;justify-content:space-between;gap:10px}
+.proj .kind{font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+.proj .yr{font-size:.95rem;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.proj h3{font-size:1.65rem;line-height:1.15}
+.proj .client{color:var(--muted);font-size:1.05rem;font-weight:600;margin-top:-4px}
+.proj p{margin:0;color:var(--muted);font-size:1.12rem}
+.clients{margin-top:clamp(44px,6vw,72px);padding-top:28px;border-top:1px solid var(--line);display:grid;gap:16px}
+.clients .caps{color:var(--muted)}
+.clients ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 30px}
+.clients li{font-weight:700;font-size:1.25rem}
+.films{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,3vw,40px)}
+@media (max-width:700px){.films{grid-template-columns:minmax(0,1fr)}}
+.film{display:grid;gap:8px;align-content:start;text-decoration:none;min-width:0}
+.fph{position:relative;aspect-ratio:16/9;max-width:100%;overflow:hidden;background:#141C36;margin-bottom:8px}
+.fph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.film:hover .fph img{transform:scale(1.03)}
+@media (prefers-reduced-motion: reduce){.fph img{transition:none}}
+.fph .play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:var(--coral)}
+.fph .play::after{content:"";position:absolute;left:31px;top:24px;border-style:solid;border-width:14px 0 14px 22px;border-color:transparent transparent transparent #141C36}
+.fph .dur{position:absolute;right:12px;bottom:12px;background:rgba(20,28,54,.85);color:#fff;font-weight:700;font-size:1rem;padding:4px 10px;font-variant-numeric:tabular-nums}
+.film .kind{font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+.film h3{font-size:1.8rem;line-height:1.15}
+.film:hover h3{text-decoration:underline;text-underline-offset:6px}
+.film p{margin:0;color:var(--muted);font-size:1.15rem}
+.contact{background:var(--navy);color:var(--chalk);border-top:0}
+.contact .in{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:800px){.contact .in{grid-template-columns:minmax(0,1fr)}}
+.contact h2{font-size:clamp(2.8rem,6.6vw,4.6rem);line-height:1.02}
+.contact h2 em{color:var(--coral)}
+.contact p{margin:20px 0 0;max-width:42ch;font-size:1.4rem;color:#C9CDDB}
+.contact .caps{color:var(--coral)}
+.contact .box{border:1px solid #2A3458;padding:28px;display:grid;gap:16px}
+.contact .box .caps{color:#AEB4C8}
+.contact .box a.big-link{font-family:var(--serif);font-weight:700;font-size:1.8rem;text-decoration:none;word-break:break-word}
+.contact .box a.big-link:hover{color:var(--coral)}
+footer{background:#0B1124;color:#AEB4C8}
+footer .in{padding-block:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:1rem}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="ed-mark" viewBox="0 0 320 320"><path stroke="var(--mk-fg)" d="M34 80 L34 34 L80 34" fill="none" stroke-width="6" stroke-linecap="square"/><path stroke="var(--mk-fg)" d="M286 80 L286 34 L240 34" fill="none" stroke-width="6" stroke-linecap="square"/><path stroke="var(--mk-fg)" d="M34 240 L34 286 L80 286" fill="none" stroke-width="6" stroke-linecap="square"/><path stroke="var(--mk-fg)" d="M286 240 L286 286 L240 286" fill="none" stroke-width="6" stroke-linecap="square"/><g transform="translate(61.45 56.95)" fill-rule="evenodd"><path fill="var(--mk-fg)" d="M0.3 0.0 L0.3 8.1 L15.6 8.1 L15.8 8.3 L15.8 198.6 L0.1 198.7 L0.0 205.9 L89.9 206.0 L89.9 140.0 L86.0 140.1 L85.9 147.9 L85.2 159.3 L84.4 166.0 L82.9 174.2 L81.6 179.5 L79.8 184.6 L77.0 190.0 L74.4 193.5 L72.4 195.4 L70.3 196.8 L67.6 197.9 L65.0 198.4 L35.9 198.4 L35.7 198.2 L35.7 103.6 L35.9 103.4 L47.9 103.1 L49.5 103.6 L51.1 104.5 L54.0 107.8 L55.6 110.7 L56.7 113.6 L58.0 118.4 L58.8 122.7 L59.6 132.1 L59.5 144.0 L63.7 143.9 L63.6 58.4 L60.0 58.1 L59.5 69.2 L58.2 78.8 L57.3 82.8 L56.3 85.8 L54.6 89.4 L53.5 91.1 L51.6 93.0 L50.2 93.8 L48.9 94.2 L35.6 94.2 L35.7 8.7 L35.9 8.5 L61.3 8.5 L63.8 8.9 L67.1 9.9 L68.9 10.8 L71.3 12.6 L73.9 15.3 L76.5 19.1 L78.4 23.2 L80.2 28.6 L81.4 33.6 L82.4 40.2 L83.0 47.8 L83.2 54.2 L86.9 54.5 L87.0 0.1Z"/><path fill="var(--mk-fg)" d="M96.9 0.0 L96.8 8.1 L111.9 8.1 L112.2 8.3 L112.2 198.6 L96.9 198.7 L96.8 205.9 L155.4 206.0 L160.3 205.6 L164.0 204.7 L167.2 203.4 L169.2 202.3 L173.2 199.3 L175.3 197.2 L178.1 193.7 L182.4 186.8 L185.7 179.9 L189.2 169.9 L191.8 159.2 L194.2 146.0 L195.7 133.3 L196.7 117.9 L197.0 100.2 L196.6 91.1 L195.4 75.8 L193.8 63.4 L191.3 50.6 L188.1 39.2 L185.4 31.5 L183.1 26.0 L180.7 21.2 L178.0 16.8 L173.4 11.0 L169.5 7.0 L166.4 4.5 L163.3 2.7 L158.6 0.9 L154.3 0.0ZM151.6 7.8 L153.3 8.3 L156.1 9.8 L158.9 12.2 L162.1 16.5 L164.8 21.1 L167.2 26.4 L169.3 32.7 L171.0 39.2 L172.9 48.3 L174.3 57.0 L175.4 66.9 L176.2 78.1 L176.7 91.0 L176.8 105.5 L176.0 125.5 L175.2 135.6 L172.8 155.6 L170.2 169.2 L168.1 176.9 L166.1 182.8 L164.2 187.5 L161.5 192.5 L159.7 194.9 L157.5 197.1 L155.5 198.5 L152.9 199.6 L150.9 200.0 L132.4 200.0 L132.3 8.3 L132.5 8.1Z"/><path fill="#FF6B4A" d="M86.1 65.4 L84.3 66.2 L82.2 68.0 L80.6 70.8 L80.0 72.6 L79.5 75.8 L79.6 80.8 L80.5 86.5 L82.0 91.8 L78.9 94.7 L77.0 97.0 L74.6 101.0 L73.2 104.7 L72.4 108.7 L72.3 112.7 L72.7 116.1 L73.6 119.8 L75.1 123.4 L77.1 126.2 L79.0 127.7 L81.2 128.5 L84.2 128.7 L86.1 128.2 L87.3 127.6 L90.4 125.0 L92.3 122.3 L92.6 122.5 L94.3 126.8 L104.5 126.8 L104.5 124.6 L100.2 124.6 L96.3 113.2 L97.9 109.1 L99.4 103.1 L100.2 97.3 L100.4 91.7 L104.6 91.5 L104.6 89.3 L94.7 89.3 L94.8 91.6 L98.9 91.6 L99.1 91.8 L98.9 97.1 L98.2 102.5 L96.6 108.5 L95.8 110.4 L95.4 110.7 L88.0 90.3 L88.2 89.8 L89.8 88.7 L91.9 86.5 L93.0 84.9 L94.4 81.9 L95.0 79.7 L95.3 77.2 L94.9 71.7 L93.5 68.1 L91.6 66.1 L90.5 65.5 L88.7 65.1ZM82.5 94.5 L82.9 94.6 L91.6 119.7 L90.8 121.4 L89.3 123.5 L87.3 125.2 L85.6 125.7 L83.6 125.3 L82.4 124.6 L81.3 123.5 L80.3 122.0 L78.7 117.9 L77.7 112.2 L77.4 106.5 L78.1 101.8 L79.2 98.9 L80.1 97.3ZM86.7 67.5 L88.3 67.9 L89.9 69.6 L90.8 72.0 L91.2 74.7 L91.2 78.9 L90.5 82.8 L89.4 85.4 L88.4 86.8 L87.3 87.8 L86.8 87.3 L84.7 81.4 L83.8 77.6 L83.4 74.3 L83.6 72.1 L84.2 70.0 L84.8 68.9 L85.8 67.9Z"/></g></symbol></svg>
+
+<header class="on-navy">
+  <div class="in">
+    <a class="brand" href="#top" aria-label="Extract and Design, top of page"><svg viewBox="0 0 320 320" aria-hidden="true"><use href="#ed-mark"/></svg><span class="caps">Extract &amp; Design</span></a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#films">Films</a>
+      <a href="#services">Services</a>
+      <a href="#story">About</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero on-navy">
+    <div class="in">
+      <div>
+        <span class="caps" style="color:var(--coral)">Independent design studio · Est. 2015</span>
+        <h1 style="margin-top:20px">We design brands people <em>remember.</em></h1>
+        <p>Extract &amp; Design creates logos, marketing and print for businesses, sporting clubs and publishers in Australia and Sri Lanka.</p>
+        <div class="btns">
+          <a class="btn coral" href="#work">See our work</a>
+          <a class="btn" href="#contact">Start a project</a>
+        </div>
+      </div>
+      <div class="big"><svg viewBox="0 0 320 320" role="img" aria-label="Extract and Design logo"><use href="#ed-mark"/></svg></div>
+    </div>
+    <div class="in"><div class="strip caps"><span>Branding</span><span>Graphic design</span><span>Marketing</span><span>Publishing</span></div></div>
+  </div>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="in">
+      <div class="sh"><span class="caps">Selected work</span><h2 id="work-h">Work we're proud of</h2><p>Brands, campaigns and print for clients in Australia and Sri Lanka.</p></div>
+      <div class="projects">
+        <article class="proj"><div class="ph"><img src="work/taj-ad.jpg" alt="Taj Mahal Indian Restaurant: branding · advertising" loading="lazy"></div><div class="meta"><span class="kind">Branding · Advertising</span><span class="yr">2017–18</span></div><h3>Taj Mahal Indian Restaurant</h3><span class="client">Canberra</span><p>Logo, menu specials and social media ads for an Indian restaurant in Canberra.</p></article>
+        <article class="proj"><div class="ph"><img src="work/ballet-ad.jpg" alt="Academy of Ballet: branding · print" loading="lazy"></div><div class="meta"><span class="kind">Branding · Print</span><span class="yr">2016</span></div><h3>Academy of Ballet</h3><p>A new logo and newspaper advertising for a ballet school.</p></article>
+        <article class="proj"><div class="ph"><img src="work/helsen-sign.jpg" alt="Helsen: branding" loading="lazy"></div><div class="meta"><span class="kind">Branding</span><span class="yr">2016</span></div><h3>Helsen</h3><span class="client">Insurance office</span><p>Logo and signage for an insurance office, from first sketches to the final mark.</p></article>
+        <article class="proj"><div class="ph"><img src="work/bioinquirer.jpg" alt="BioInquirer 10: event branding" loading="lazy"></div><div class="meta"><span class="kind">Event branding</span><span class="yr">2016</span></div><h3>BioInquirer 10</h3><span class="client">International Institute of Health Sciences</span><p>Posters, flyers, banners and business cards for an international research forum.</p></article>
+        <article class="proj"><div class="ph"><img src="work/slmun.jpg" alt="Sri Lanka Model United Nations: event identity" loading="lazy"></div><div class="meta"><span class="kind">Event identity</span><span class="yr">2014</span></div><h3>Sri Lanka Model United Nations</h3><span class="client">SLMUN 2014</span><p>Stage backdrop, press materials and visual identity for Asia's largest student-run UN simulation.</p></article>
+        <article class="proj"><div class="ph"><img src="work/machan-berra.jpg" alt="Machan Berra: menu design" loading="lazy"></div><div class="meta"><span class="kind">Menu design</span><span class="yr">2018</span></div><h3>Machan Berra</h3><span class="client">Restaurant</span><p>An illustrated restaurant menu with a bold Sri Lankan character.</p></article>
+        <article class="proj"><div class="ph fit"><img src="work/sl-festival.jpg" alt="Sri Lanka Festival 2018: event graphics" loading="lazy"></div><div class="meta"><span class="kind">Event graphics</span><span class="yr">2018</span></div><h3>Sri Lanka Festival 2018</h3><span class="client">Canberra</span><p>Large-format banners and posters for a community festival in Canberra.</p></article>
+        <article class="proj"><div class="ph"><img src="work/vihara.jpg" alt="Canberra Buddhist Viharaya: film" loading="lazy"></div><div class="meta"><span class="kind">Film</span><span class="yr">2019</span></div><h3>Canberra Buddhist Viharaya</h3><span class="client">Grand opening</span><p>Videography and promotional graphics for the temple's grand opening.</p></article>
+        <article class="proj"><div class="ph"><img src="work/dosage.jpg" alt="The Dosage magazine: publishing" loading="lazy"></div><div class="meta"><span class="kind">Publishing</span><span class="yr">2015</span></div><h3>The Dosage magazine</h3><span class="client">Sri Lanka</span><p>Sri Lanka's first digital video health magazine: 10 stories, 23 films and 33 printed pages.</p></article>
+      </div>
+      <div class="clients"><span class="caps">Clients include</span><ul><li>International Institute of Health Sciences</li><li>Sri Lanka Model United Nations</li><li>Taj Mahal Canberra</li><li>Academy of Ballet</li><li>Helsen</li><li>Clique Consult</li><li>Dark Rye</li><li>Machan Berra</li><li>I'AMK The Lifestyle Coach</li><li>Yucca</li><li>Canberra Buddhist Viharaya</li><li>Homers Sporting Club</li></ul></div>
+    </div>
+  </section>
+
+  <section id="films" aria-labelledby="films-h">
+    <div class="in">
+      <div class="sh"><span class="caps">Film &amp; video</span><h2 id="films-h">Films</h2><p>Interviews, documentaries and promotional films. Each one opens on Vimeo or YouTube.</p></div>
+      <div class="films">
+        <a class="film" href="https://vimeo.com/reviews/6dc7f8ba-0ebd-49a2-b651-ca0ac9e0e42c/videos/396138004" target="_blank" rel="noopener"><div class="fph"><img src="films/film1.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">3:00</span></div><span class="kind">Leadership film</span><h3>Why should anyone be led by me? <span aria-hidden="true">↗</span></h3><p>A short film on leadership, featuring consultant and entrepreneur Kushani Sriwardene.</p></a>
+        <a class="film" href="https://vimeo.com/reviews/6dc7f8ba-0ebd-49a2-b651-ca0ac9e0e42c/videos/414073592" target="_blank" rel="noopener"><div class="fph"><img src="films/film2.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">3:00</span></div><span class="kind">Interview</span><h3>My leadership story <span aria-hidden="true">↗</span></h3><p>A sit-down interview where she tells her leadership story in her own words.</p></a>
+        <a class="film" href="https://vimeo.com/reviews/6dc7f8ba-0ebd-49a2-b651-ca0ac9e0e42c/videos/349469680" target="_blank" rel="noopener"><div class="fph"><img src="films/film3.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">4:53</span></div><span class="kind">Promotional film · 2016</span><h3>Extract and Design Production 1 <span aria-hidden="true">↗</span></h3><p>Our first studio production, shot and edited in-house.</p></a>
+        <a class="film" href="https://vimeo.com/reviews/6dc7f8ba-0ebd-49a2-b651-ca0ac9e0e42c/videos/351785287" target="_blank" rel="noopener"><div class="fph"><img src="films/film4.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">6:46</span></div><span class="kind">Documentary</span><h3>Canberra gets to pay tribute to its own pagoda <span aria-hidden="true">↗</span></h3><p>The story of Canberra's new Buddhist pagoda and the community behind it.</p></a>
+        <a class="film" href="https://www.youtube.com/watch?v=SU2AfHk5g-I" target="_blank" rel="noopener"><div class="fph"><img src="films/yt-machan.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></div><span class="kind">Documentary · YouTube</span><h3>Making of Machan Berra <span aria-hidden="true">↗</span></h3><p>A behind-the-scenes documentary on the Machan Berra food team. A film by Eashaan Dassanayaka.</p></a>
+        <a class="film" href="https://www.youtube.com/watch?v=ICsdNwkjW2o" target="_blank" rel="noopener"><div class="fph"><img src="films/yt-ink.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span><span class="dur">5 chapters</span></div><span class="kind">Short film series · YouTube</span><h3>The Way of Ink <span aria-hidden="true">↗</span></h3><p>A five-part short film in Melbourne following the art of Japanese ink, from preparation to letting go.</p></a>
+        <a class="film" href="https://www.youtube.com/watch?v=s7YC101dJuE" target="_blank" rel="noopener"><div class="fph"><img src="films/yt-une1.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></div><span class="kind">Education film · YouTube</span><h3>UNE Students at IIHS <span aria-hidden="true">↗</span></h3><p>University of New England students and staff on their visit to the International Institute of Health Sciences in Sri Lanka.</p></a>
+        <a class="film" href="https://www.youtube.com/watch?v=aqlsG7DzFBo" target="_blank" rel="noopener"><div class="fph"><img src="films/yt-une2.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></div><span class="kind">Education film · YouTube</span><h3>UNE visit to IIHS <span aria-hidden="true">↗</span></h3><p>University of New England lecturers talk about their visit to IIHS and working with its students.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" aria-labelledby="svc-h">
+    <div class="in">
+      <div class="sh"><span class="caps">What we do</span><h2 id="svc-h">Our services</h2><p>One team takes your project from first idea to finished product.</p></div>
+      <div class="services">
+        <article class="svc crop"><h3>Branding</h3><p>Logos and visual identities that make your business easy to recognise.</p></article>
+        <article class="svc crop"><h3>Graphic design</h3><p>Posters, flyers, social media posts and sports team graphics.</p></article>
+        <article class="svc crop"><h3>Marketing &amp; advertising</h3><p>Ad campaigns and social media content aimed at the customers you want.</p></article>
+        <article class="svc crop"><h3>Web &amp; publishing</h3><p>Websites, magazines and printed materials, from design to distribution.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" aria-labelledby="proc-h">
+    <div class="in">
+      <div class="sh"><span class="caps">How we work</span><h2 id="proc-h">Our name is our method.</h2><p>Every project follows the same four steps.</p></div>
+      <ol class="steps">
+        <li><span class="no">01</span><h3>Listen</h3><p>We learn about your business, your customers and what you want to achieve.</p></li>
+        <li><span class="no">02</span><h3>Extract</h3><p>We pull out the one thing that makes you different.</p></li>
+        <li><span class="no">03</span><h3>Design</h3><p>We build the logo, campaign or publication around it.</p></li>
+        <li><span class="no">04</span><h3>Deliver</h3><p>You get finished files, ready to print, post or publish.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="story" aria-labelledby="story-h">
+    <div class="in story">
+      <div class="sh" style="margin:0"><span class="caps">About us</span><h2 id="story-h">Who we are</h2></div>
+      <div>
+        <blockquote>A small, independent studio that cares about <em>getting it right</em>.</blockquote>
+        <p style="margin-top:26px">Extract &amp; Design started in Colombo in 2015 as an independent team of designers. Our first big project was designing and publishing our own magazine, from the page layouts to the website.</p>
+        <p>Today we work with businesses, sporting clubs and publishers in Sri Lanka and Australia. You deal directly with the people doing the work.</p>
+        <div class="founder crop"><b>Eashaan Dassanayaka</b><span>Founder and Managing Director</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-h">
+    <div class="in">
+      <div>
+        <span class="caps">Contact</span>
+        <h2 id="contact-h" style="margin-top:16px">Have a project in <em>mind?</em></h2>
+        <p>Tell us what you need. We'll reply with ideas and a quote.</p>
+      </div>
+      <div class="box">
+        <span class="caps">Message us on Facebook</span>
+        <a class="big-link" href="https://www.facebook.com/ExtractAndDesign" target="_blank" rel="noopener">facebook.com/ ExtractAndDesign ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in"><span>© 2026 Extract &amp; Design</span><span>Sri Lanka · Australia</span></div>
+</footer>
+
+</body>
+</html>
